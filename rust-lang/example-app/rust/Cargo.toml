@@ -1,0 +1,12 @@
+[package]
+name = "netstats"
+version = "0.1.0"
+authors = ["Mario Alexandro Santini <marioalexandro.santini@telecomitalia.it>"]
+edition = "2018"
+
+[dependencies]
+csv = "1"
+
+[[bin]]
+name = "netstats"
+path = "src/main.rs"
