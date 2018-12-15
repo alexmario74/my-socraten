@@ -31,7 +31,7 @@ Utilizzando docker, prima occorre creare una cartella _data_ che contenga il fil
     -a----       15/12/2018     11:14            507 README.md
 
     $ mkdir data
-    $ cp /mio/file.csv .\data
+    $ cp /mio/file.csv .\data\topology.csv
 
 Quindi si può procedere alla build dell'immagine:
 
