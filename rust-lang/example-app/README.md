@@ -35,7 +35,7 @@ Utilizzando docker, prima occorre creare una cartella _data_ che contenga il fil
 
 Quindi si può procedere alla build dell'immagine:
 
-    $ docker build -t netstats-rust .
+    $ docker build -f Dockerfile-4-rust -t netstats-rust .
 
 > Attenzione a mettere il '.' finale!
 
