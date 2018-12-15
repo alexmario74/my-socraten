@@ -1,0 +1,12 @@
+FROM rust:latest
+
+RUN mkdir -p /usr/src/netstats
+
+COPY ./rust /usr/src/netstats
+COPY ./data/topology.csv /usr/src/netstats
+
+WORKDIR /usr/src/netstats
+
+RUN cargo build --release
+
+CMD ["./target/release/netstats", "topology.csv"]
