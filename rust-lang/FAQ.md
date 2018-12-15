@@ -70,47 +70,9 @@ _rustup_ consente di gestire le varie versioni, di installarle, di cambiarle e q
 
 Poi c'è il compilatore _rustc_ che è lo strumento base per compilare i programmi _Rust_ e di cui ho già elogiato le enormi qualità di messaggistica e di help che offre.
 
-Veniamo a _cargo_ che è considerato lo strumento di project build nella community di _Rust_.
+Veniamo a _cargo_ che è considerato lo strumento di project build e gestione delle dipendenze nella community di _Rust_.
 
 E' uno strumento ben collaudato che consente di creare e buildare facilmente il proprio progetto.
-
-Di seguito l'help:
-<code>
-Rust's package manager
-
-USAGE:
-    cargo [OPTIONS] [SUBCOMMAND]
-
-OPTIONS:
-    -V, --version           Print version info and exit
-        --list              List installed commands
-        --explain <CODE>    Run `rustc --explain CODE`
-    -v, --verbose           Use verbose output (-vv very verbose/build.rs output)
-    -q, --quiet             No output printed to stdout
-        --color <WHEN>      Coloring: auto, always, never
-        --frozen            Require Cargo.lock and cache are up to date
-        --locked            Require Cargo.lock is up to date
-    -Z <FLAG>...            Unstable (nightly-only) flags to Cargo, see 'cargo -Z help' for details
-    -h, --help              Prints help information
-
-Some common cargo commands are (see all commands with --list):
-    build       Compile the current package
-    check       Analyze the current package and report errors, but don't build object files
-    clean       Remove the target directory
-    doc         Build this package's and its dependencies' documentation
-    new         Create a new cargo package
-    init        Create a new cargo package in an existing directory
-    run         Build and execute src/main.rs
-    test        Run the tests
-    bench       Run the benchmarks
-    update      Update dependencies listed in Cargo.lock
-    search      Search registry for crates
-    publish     Package and upload this package to the registry
-    install     Install a Rust binary
-    uninstall   Uninstall a Rust binary
-
-See 'cargo help <command>' for more information on a specific command.
-</code>
 
 Riguardo alla pubblicazione di _crates_ non sono molto informato, in quanto non ho mai provato. Sulla presenza di _crates_ utilizzabili direi che c'è molta roba.
 
