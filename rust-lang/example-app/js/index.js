@@ -16,7 +16,7 @@ function main() {
         delimiter: ';'
     })
 
-    const transformer = transform(function(record, cb){
+    const transformer = transform((record, cb) => {
         try {
             service = classToService(
                 calculateMoClass(record[0], record[3])
@@ -37,7 +37,7 @@ function main() {
     )
 
     reader.on('end', 
-        _ => console.log('(', countRadio, ',', countCore, ')')
+        _ => console.log(`(${countRadio}, ${countCore})`)
     )
 
     reader
