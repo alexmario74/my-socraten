@@ -43,3 +43,12 @@ Una volta terminato sarà possibile mandare in esecuzione il container:
 
     $ docker run --rm netstats-rust
 
+## Istruzioni per NodeJS
+
+La parte _Node_ richiede una versione recente almeno _8.11.3_, quindi occorre installare le dipendenze:
+
+    $ npm i
+
+Una volta terminato il comando di esecuzione:
+
+    $ npm start ../data/topology.csv

@@ -1,0 +1,26 @@
+{
+  "name": "netstats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index",
+    "test": "echo \"nothing!\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexmario74/my-socraten.git"
+  },
+  "author": "Mario Alexandro Santini <alexmario74@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexmario74/my-socraten/issues"
+  },
+  "homepage": "https://github.com/alexmario74/my-socraten#readme",
+  "dependencies": {
+    "csv": "^5.0.1"
+  },
+  "engines": {
+    "node": ">=8.11.3"
+  }
+}
