@@ -3,6 +3,8 @@ const path = require('path')
 const parse = require('csv-parse')
 const transform = require('stream-transform')
 
+main()
+
 function main() {
     if (process.argv.length < 3) {
         console.error("error: a valid csv file path should be provided.")
@@ -114,5 +116,3 @@ const classToService = moClass => {
             throw new Error('no service for class ' + moClass)
     }
 }
-
-main()
