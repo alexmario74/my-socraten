@@ -41,9 +41,7 @@ pub fn class_to_service(mo_class: &str) -> Option<ServiceKind> {
         "ETSC" => Some(ServiceKind::Core("TR TSC")),
         "EHSS" => Some(ServiceKind::Core("HSS")),
         "ESBG" => Some(ServiceKind::Core("SBG")),
-        _ => {
-            None
-        },
+        _ => None,
     }
 }
 
@@ -61,19 +59,25 @@ pub fn analyze_file(csv_file_name: &str) -> Result<Report, Box<Error>> {
     for result in rdr.records() {
         let record = result?;
 
-        if &record[0] == "null" || &record[3] == "null" {
+        let (ref mo, ref sn) = (&record[0], &record[3]);
+
+        if skip_invalid_record(mo, sn) {
             continue;
         }
 
-        let mo_class = calculate_mo_class(&record[0], &record[3]);
+        let mo_class = calculate_mo_class(mo, sn);
 
         if let Some(service_kind) = class_to_service(&mo_class) {
             match service_kind {
-                ServiceKind::Radio(_, _) => count_radio = count_radio + 1,
-                ServiceKind::Core(_) => count_core = count_core + 1,
+                ServiceKind::Radio(_, _) => count_radio += 1,
+                ServiceKind::Core(_) => count_core += 1,
             }
         }
     }
 
     Ok((count_radio, count_core))
+}
+
+fn skip_invalid_record(mo: &str, sn: &str) -> bool {
+    mo == "null" || sn == "null"
 }
