@@ -13,7 +13,7 @@ pub enum ServiceKind {
     Core(ModelKind),
 }
 
-pub fn calculate_mo_class<'a>(mo: &'a str, sn: &'a str) -> &'a str {
+pub fn calculate_mo_class<'a>(mo: &'a str, sn: &str) -> &'a str {
     let mo_class = mo.split("/").last().unwrap();
 
     mo_class.trim_end_matches(("-".to_owned() + sn).as_str())
