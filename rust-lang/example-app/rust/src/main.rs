@@ -13,3 +13,16 @@ fn main() {
         eprintln!("a valid csv file name should be provided.");
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn analyze_file() {
+        match netstats::analyze_file("topology.csv") {
+            Ok(report) => assert_eq!(report, (274703, 371)),
+            Err(err) => assert!(false, "{:?}", err),
+        }
+    }
+}
